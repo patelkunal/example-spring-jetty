@@ -11,6 +11,7 @@
 
 	<properties>
 		<spring.version>4.2.0.RELEASE</spring.version>
+		<org.springframework.security.version>4.0.3.RELEASE</org.springframework.security.version>
 		<jetty.version>9.0.6.v20130930</jetty.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -76,6 +77,17 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 			<version>2.4.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springframework.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springframework.security.version}</version>
 		</dependency>
 
 
