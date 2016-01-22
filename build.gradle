@@ -1,5 +1,5 @@
 apply plugin: 'java'
-apply plugin: 'war'
+// apply plugin: 'war'
 apply plugin: 'application'
 
 group = 'org.coderearth.kitchens.embjetty'
@@ -30,6 +30,14 @@ dependencies {
     compile group: 'org.springframework.security', name: 'spring-security-config', version:'4.0.3.RELEASE'
     
     testCompile group: 'junit', name: 'junit', version:'4.11'
+}
+
+run {
+	println("running run command !!")
+	from 'src/main/webapp' {
+		into 'build/classes/webapp'
+	}
+
 }
 
 mainClassName = "org.coderearth.kitchens.embjetty.initializer.EmbeddedJetty"
