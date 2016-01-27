@@ -3,7 +3,6 @@ package org.coderearth.kitchens.embjetty.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -14,6 +13,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
  */
 @Configuration
 @EnableWebSecurity
+@ImportResource(locations = "classpath:security-context.xml")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	public SecurityConfig() {
